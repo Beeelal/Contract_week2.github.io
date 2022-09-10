@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contract.pk</title>
+	<link rel="stylesheet" type="text/css" href="contract2.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="D:\ITU\4\Other\Contract.PK\contract2.js"></script>
+	<style type="text/css">
+		body
+		{
+			background-image: url(pic7.webp);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
+		
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id = "root">
+	<center><h2>CONTRACT.PK</h2></center>
+	<center><h3>Get a lawyer, from your house!</h3></center>
+
+	<center><p style="color:ghostwhite;">Click the "View" button to show or hide the list of the functional and non-functional requirements of this project:</p></center>
+
+<center><button type="button" class="btn" onclick="myFunction()"><b>View</b></button></center>
+<br>
+
+<!-- <center><h3 class = "one">Functional_Requirement Non-Fucntional_Requirements<h3></center> -->
+
+<div id="myDIV">
+  <ul style="list-style-type:square;" id="id01" id="root">
+    <center><h2 style="background-color:greenyellow;"> Functional Requirement</h2></center>
+    <li style="color: red;">Descriptions of System Reports</li>
+    <li style="color: red;">Data handling logic</li>
+    <li style="color: red;">Details of Logic</li>
+    <li style="color: red;">Information about workflows performed by system</li>
+    <li style="color: red;">Should define who is aloowed to create?modify?delete system data</li>
+    <li style="color: red;">Transcation (if any) should be handled carefully</li>
+    <li style="color: red;">Rules about the services provided</li>
+    <li style="color: red;">Lists of services that are provided</li>
+    <li style="color: red;">Lists of questions that the user can ask</li>
+    <li style="color: red;">FAQ's (Frequently Asked Questions)</li>
+    <li style="color: red;">Should show the permission granted by the PPC</li>
+    <li style="color: red;">Display estimated time for their queries to be answered</li>
+    <li style="color: red;">Should define who is allowed to create/modify/delete the system data</li>
+    <li style="color: red;">Should notify the user their query is answered</li>
+    <li style="color: red;">User should be able to re-ask a questions if not satisfied by the given answer, and the next answer should be more accurate</li>
+    <li style="color: red;">Should display recommended questions when writing the questions in the question bar</li>
+    <li style="color: red;">Should never reaveal the identity of the user</li>
+    <li style="color: red;">Should allow user to veriify their account by their phone number</li>
+    <li style="color: red;">User should login evrytime to ensure safety/security</li>
+    <li style="color: red;">Given answers should be accurate</li>
+</ul>
+
+<p>Click the button to sort the <b>Functional Requirement</b> list alphabetically:
+<button type="button" class="btn" onclick="sortList()">Sort</button></p>
+
+<p>Click the button to shuffle the <b>Functional Requirement</b> list :
+<button type="button" class="btn" onclick="abc1()">shuffle</button></p>
+
+<ul style="list-style-type:square;" id="id02" id="root">
+    <center><h2 style="background-color:greenyellow;"> Non-Functional Requirement</h2></center>
+    <li style="color: blue;">Questions should be answered in a very less time</li>
+    <li style="color: blue;">Should be required that an account is created</li>
+    <li style="color: blue;">Account should be locked after several wrong login attempts</li>
+    <li style="color: blue;">The given answers should be correct and reliable</li>
+    <li style="color: blue;">Should show the rate(%) of the answer being correct</li>
+    <li style="color: blue;">There should be several languages to talk in</li>
+    <li style="color: blue;">Should be several currency rates</li>
+    <li style="color: blue;">User should be able to ask questions by speaking or writing</li>
+    <li style="color: blue;">Answers of the questions should be written but user should also be able to listen to the answer</li>
+    <li style="color: blue;">The user interface should be friendly</li>
+    <li style="color: blue;">Should be able to share your received answers across other apps</li>
+    <li style="color: blue;">The service should be able to perform smoothly under high load /website traffic</li>
+    <li style="color: blue;">The software should be easy to use</li>
+    <li style="color: blue;">User should be able to tell if the received answer was helpful</li>
+    <li style="color: blue;">Performance of the software should be good(like loading pages)</li>
+    <li style="color: blue;">All previous records of the user should be kept safe</li>
+    <li style="color: blue;">Should tell the user if the received answer has halped anyone else with their matter without revelaing their identity</li>
+    <li style="color: blue;">There should be a public feed in the software</li>
+    <li style="color: blue;">User should be able to post their reviews about the answers to the public feed in the software anonymously</li>
+    <li style="color: blue;">Software should be compatible with different devices (e.g. ios and androids)</li>
+  </ul>
+
+<p>Click the button to sort the <b>Non-Functional Requirement</b> list alphabetically:
+<button type="button" class="btn" onclick="shuffleList()">sort</button></p>
+
+<p>Click the button to shuffle the <b>Non-Functional Requirement</b> list:
+<button type="button" class="btn" onclick="abc2()">shuffle</button></p>
+
+</div>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<script>                  //For shufling the FR list order everytime it refreshes    
+   var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id01");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length + Math.floor(Math.random() * Math.floor(Math.random() * 10))); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + Math.floor(Math.random() * Math.floor(Math.random() * 10))].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + Math.floor(Math.random() * 10)], b[i]);
+      switching = true;
+    }
+  }
+
+</script>
+
+
+<script>            //For shufling the NFR list order everytime it refreshes
+  var list, i, switching, b, shouldSwitch;
+  list = document.getElementById("id02");
+  switching = true;
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // start by saying: no switching is done:
+    switching = false;
+    b = list.getElementsByTagName("LI");
+    // Loop through all list-items:
+    for (i = 0; i < (b.length + Math.floor(Math.random() * Math.floor(Math.random() * 10))); i++) {
+      // start by saying there should be no switching:
+      shouldSwitch = false;
+      /* check if the next item should
+      switch place with the current item: */
+      if (b[i].innerHTML.toLowerCase() > b[i + Math.floor(Math.random() * Math.floor(Math.random() * 10))].innerHTML.toLowerCase()) {
+        /* if next item is alphabetically
+        lower than current item, mark as a switch
+        and break the loop: */
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark the switch as done: */
+      b[i].parentNode.insertBefore(b[i + Math.floor(Math.random() * 10)], b[i]);
+      switching = true;
+    }
+  }
+</script>
+  
+
+  <!-- --------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<br><br>
+
+
+<br>
+<br>
+
+
+<center><p style="color:black;">Please Enter number of hours in the text-field</p></center>
+
+ <center><input type="number" class="input-field" placeholder="Type something..." id="myInput">
+   <button type="button" class="buton" onclick="getInputValue();" onclick="myFunction();"><center><b>Done</b></center></button></center>
+    
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            
+            document.getElementById("demo").innerHTML = inputVal*10;
+            // Displaying the value
+            //alert(inputVal * 2);
+        }
+    </script>
+    <center><p style="color:black;">Click the "Done" button to see the rate in usd according to the number of hours</p></center>
+<center><b><p id="demo"></p></b></center>
+
+<br>
+ <div id="content-wrap">
+<footer id = "footer">
+  <p><b>Username:</b> Bilal Arshad #5665<br> <b>Email: </b>
+ <a href="mailto:bilalmirzh500@gmail.com" style="color:blueviolet;">bilalmirzh500@gmail.com</a></p>
+</footer>
+</div>
+</body>
